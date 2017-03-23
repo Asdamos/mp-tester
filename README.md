@@ -1,23 +1,14 @@
-# Zbiór skryptów do automatycznego testowania rozwiązań
+# Automatyczne testowanie 1 pracowni
 
 ## Jak testować?
-W pierwszej kolejności umieść swoje rozwiązanie w pliku _solution.pl_.
+W pierwszej kolejności umieść swoje rozwiązanie w pliku _solution.pl_.  
 Następnie uruchom testy poleceniem make:
 
 ```
-make test % uruchom wszystkie testy
-```
-
-```
-make human % uruchom testy innych osób
-```
-
-```
-make generator % uruchom testy wygenerowane automatycznie
-```
-
-```
-make g-huge.test % uruchom pojedynczy test g-huge.test
+make test           % uruchom wszystkie testy z ./tests
+make human          % uruchom wszstkie testy h-*.test
+make generator      % uruchom wszystkie testy g-*.test
+make g-huge.test    % uruchom pojedynczy test g-huge.test
 ```
 
 ## Jak dodać nowe testy?
