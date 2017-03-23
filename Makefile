@@ -4,8 +4,8 @@ PG = swipl -q
 
 test: $(TESTS)
 
-test-human: $(filter h-%, $(TESTS))
-test-generator: $(filter g-%, $(TESTS))
+human: $(filter h-%, $(TESTS))
+generator: $(filter g-%, $(TESTS))
 	
 %.test:
 	@echo
