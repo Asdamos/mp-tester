@@ -61,4 +61,4 @@ tests(three_variable_negation_v1,validity,[p v ~q v ~r, p v q v r],500,solution(
 tests(three_variable_negation_v2,validity,[p v ~q v ~r, p v q v r],500,solution([(p,t),(q,t),(r,f)])).
 tests(three_variable_negation_v3,validity,[p v ~q v ~r, p v q v r],500,solution([(p,t),(q,f),(r,t)])).
 tests(three_variable_negation_v4,validity,[p v ~q v ~r, p v q v r],500,solution([(p,t),(q,f),(r,f)])).
-tests(three_variable_negation_count,validity,[p v ~q v ~r, p v q v r],500,count(4)).
+tests(three_variable_negation_count,validity,[p v ~q v ~r, p v q v r],500,count(6)).
