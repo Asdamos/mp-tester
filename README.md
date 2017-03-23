@@ -36,6 +36,10 @@ przechodzi wiedziała gdzie jest błąd.
 make test | curl -F 'f:1=<-' ix.io
 ```
 
+Wyniki innych osób
+[http://ix.io/pcR](http://ix.io/pcR)  
+[http://ix.io/pcS](http://ix.io/pcS)
+
 ## Uwagi
 Wiem, że niektóre testy u niektórych osób są błędne.
 Postaram się je poprawić.
