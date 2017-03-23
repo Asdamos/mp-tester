@@ -17,7 +17,7 @@ tests(klauzulaZPowtorzeniamiNegacji, validity, [~p,~p,~p,~p,~p,~p,~p,~p,~p,~p,~p
 
 
 tests(klauzulaPusta, validity, [], 500, solution([])).
-tests(klauzulaZKlauzulaPusta, validity, [[]], 500, solution(0)).
+tests(klauzulaZKlauzulaPusta, validity, [[]], 500, count(0)).
 tests(klauzulaZListaPusta, validity,  [p v q, [], p], 500, count(0)).
 
 
