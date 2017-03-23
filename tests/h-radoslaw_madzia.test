@@ -8,7 +8,7 @@
 
 tests(excluded_middle, validity, [p v ~p], 500, solution([(p,t)])).
 
-tests(empty, validity, [], 500, count(0)).
+tests(empty, validity, [], 500, count(1)).
 
 tests(single, validity, [p], 500, solution([(p, t)])).
 tests(single, validity, [p], 500, count(1)).
