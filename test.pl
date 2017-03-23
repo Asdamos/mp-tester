@@ -13,7 +13,7 @@ test_all :-
 % odpal pojedynczy test
 run_test(Name) :-
   tests(Name, Type, Input, Timeout, Ans),
-  format("~w~t~32+ ", [Name]),
+  format("~w~t~50+ ", [Name]),
   % sprawdz czy test jest prawidło zoapisany
   ( validate_test(Name, Type, Input, Timeout, Ans) ->
       % odpal test
