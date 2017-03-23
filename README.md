@@ -11,6 +11,8 @@ make generator      % uruchom wszystkie testy g-*.test
 make g-huge.test    % uruchom pojedynczy test g-huge.test
 ```
 
+Przykładowe rozwiązanie dla make test [http://ix.io/pcF](http://ix.io/pcF)
+
 ## Jak dodać nowe testy?
 Skopiuj plik template.test znajdujący się w katalogu tests i zmień jego nazwę na odpowiednio:
 ```
