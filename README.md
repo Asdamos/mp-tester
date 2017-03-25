@@ -4,6 +4,10 @@ albo usuń szablon _solution.pl_ i zrób dowiązanie/skopiuj do swojego główne
 ```
 ln -s ../solver/pawel_smolak.pl solution.pl
 ```
+**Uwaga**, upewnij się, że w pliku solution znajduje się definicja modułu:
+```
+:- module(imie_nazwisko, [solve/2, op(200, fx, ~), op(500, xfy, v)]).
+```
 
 Następnie uruchom testy poleceniem make:
 
