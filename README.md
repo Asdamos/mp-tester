@@ -13,9 +13,9 @@ Następnie uruchom testy poleceniem make:
 
 ```
 make test           % uruchom wszystkie testy z ./tests
-make human          % uruchom wszstkie testy h-*.test
-make generator      % uruchom wszystkie testy g-*.test
-make g-huge.test    % uruchom pojedynczy test g-huge.test
+make validity       % uruchom wszstkie testy validity v-*.test
+make performance    % uruchom wszystkie testy performance p-*.test
+make p-huge.test    % uruchom pojedynczy test p-huge.test
 ```
 
 Przykładowe rozwiązanie dla make test [http://ix.io/pcF](http://ix.io/pcF)
@@ -23,16 +23,16 @@ Przykładowe rozwiązanie dla make test [http://ix.io/pcF](http://ix.io/pcF)
 ## Jak dodać nowe testy?
 Skopiuj plik template.test znajdujący się w katalogu tests i zmień jego nazwę na odpowiednio:
 ```
-h-imie_nazwisko.test
+p-imie_nazwisko.test
 ```
-jeśli jest to plik zawierający ręcznie pisane testy lub:
+jeśli jest to plik zawierający testy performance lub:
 
 ```
-g-imie_nazwisko.test
+v-imie_nazwisko.test
 ```
-jeśli jest to plik zawierający testy wygenerowane automatycznie.
+jeśli jest to plik zawierający testy validity.
 
-Następnie umieść ten plik w katalogu tests, oraz wykonaj pull-requesta aby udostępnić
+Następnie umieść pliki w katalogu tests, oraz wykonaj pull-requesta aby udostępnić
 test innym.
 
 Dobrze, żeby skomentować każdy test i go krótko uzasadnić, aby osoba, której test nie
