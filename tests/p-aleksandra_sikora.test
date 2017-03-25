@@ -1,0 +1,4 @@
+:- module(aleksandra_sikora_tests, [tests/5]).
+tests(testWydajnosciowy1,performance, [p v q v r v p v r v f, f v b v b v m, m, q, w, u], 500,solution([(b, f),  (f, f),  (m, t),  (p, f),  (q, t),  (r, f),  (u, t),  (w, t)])).
+tests(testWydajnosciowy3, performance,[a v b v c v d v m v n], 1000, count(63) ).
+tests(testWydajnosciowy4, performance,  [p v q v r,p v q v r,p v q v r,p v q v r,p v q v r,p v q v r,p v q v r,p v q v r,p v q v r],1000, solution([(p, f),  (q, f),  (r, t)])).

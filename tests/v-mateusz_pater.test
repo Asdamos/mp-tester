@@ -1,0 +1,15 @@
+:- module(mateusz_pater, [tests/5]).
+tests(excluded_middle, validity, [p v ~p], 500, solution([(p,t)])).
+tests(poprawna_ilosc_rozwiazan, validity, [p v ~p], 500, count(2)). 
+tests(prawo_demorgana, validity, [~p, ~q], 500, solution([(p,f), (q,f)])). 
+tests(puste, validity, [], 500, solution([])).
+tests(literal_i_klauzula, validity, [p v ~p, p], 500, solution([(p,t)])).
+tests(wykluczajaceSieKlauzule,validity,[p v q,~p v q,p v ~q, ~p v ~q],500, count(0)).
+tests(pojedynczy_Literal, validity, [p], 500, solution([(p,t)])). 
+tests(klauzula_Z_Literalem_Negatywnym, validity, [p, q, ~s], 500, solution([(p,t), (q,t), (s,f)])).
+tests(klauzula_dwuargumentowa, validity, [p v q], 500, solution([(p,t),(q,t)])).
+tests(klauzula_trojargumentowa, validity, [p, q, s], 500, solution([(p,t), (q,t), (s,t)])).
+tests(powtorki, validity, [p v q v s, p v q, s], 500, solution([ (s, t), (q, t), (p, t)])).
+tests(klauzula_pusta, validity, [p, []], 500, count(0)).
+tests(sprzecznoscl_literalow, validity, [p, ~p], 500, count(0)).
+tests(obie_klauzule_prawdziwe, validity, [p v q, ~p v q, p v ~q], 500, solution([ (q, t), (p, t)] )).

@@ -1,0 +1,3 @@
+:- module(michal_lazowski_tests, [tests/5]).
+tests(wydajnosciowy1, performance, [~n v b v ~c, ~m v n v ~b, ~l v m v ~n, ~k v l v ~m, ~j v k v ~l, ~i v j v ~k, ~h v i v ~j, ~g v h v ~i, ~f v g v ~h, ~e v f v ~g, ~d v e v ~f, ~c v d v ~e, ~b v c v ~d], 5000, count(1497)).
+tests(wydajnosciowy2, performance, [~j v k v ~c v g, ~i v o v ~b v f, ~h v n v ~f v e, ~g v m v ~e v i, ~f v l v ~d v h], 5000, count(11520)).

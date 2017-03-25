@@ -4,8 +4,8 @@ PG = swipl -q -O #-G100g -T20g -L2g
 
 test: $(TESTS)
 
-human: $(filter h-%, $(TESTS))
-generator: $(filter g-%, $(TESTS))
+performance: $(filter p-%, $(TESTS))
+validity: $(filter v-%, $(TESTS))
 	
 %.test:
 	@echo
@@ -13,4 +13,4 @@ generator: $(filter g-%, $(TESTS))
 	@echo "------------------------------------------------------------"
 	@$(PG) -s test.pl -t test_all tests/$@
 
-.PHONY: test
+.PHONY: test performance validity

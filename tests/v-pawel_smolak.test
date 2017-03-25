@@ -1,0 +1,15 @@
+:- module(pawel_smolak_tests, [tests/5]).
+tests(duplicates, validity, [p v p v p v p], 500, count(1)).
+tests(duplicates2, validity, [p, p, p, p], 500, count(1)).
+tests(duplicates3, validity, [p v p v p, p v p v p], 500, count(1)).
+tests(backtrack, validity, [p v q], 500, count(3)).
+tests(search_for_all_solutions, validity, [p v ~p, q v ~q, r v ~r, s v ~s], 500, count(16)).
+tests(search_for_all_solutions2, validity, [~p v q, ~q v r, ~r v s, ~s], 500, count(1)).
+tests(search_for_all_solutions2, validity, [~p v q, ~q v r, ~r v s, ~s], 500, solution([(p,f), (q,f), (r,f), (s,f)])).
+tests(tautology_c, validity, [p v ~p, q v ~q], 500, count(4)).
+tests(tautology_s, validity, [p v ~p, q v ~q], 500, solution([(p,t), (q,f)])).
+tests(no_solutions, validity, [p, ~p, q v s], 500, count(0)).
+tests(no_clouses_c, validity, [], 500, count(1)).
+tests(no_clauses_s, validity, [], 500, solution([])).
+tests(empty_clause_only, validity, [[]], 500, count(0)).
+tests(with_empty_clause, validity, [p v q, p v ~p, []], 500, count(0)).
