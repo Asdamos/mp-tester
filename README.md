@@ -1,7 +1,10 @@
-# Automatyczne testowanie 1 pracowni
-
 ## Jak testować?
-W pierwszej kolejności umieść swoje rozwiązanie w pliku _solution.pl_.  
+W pierwszej kolejności umieść swoje rozwiązanie w pliku _solution.pl_ manualnie  
+albo usuń szablon _solution.pl_ i zrób dowiązanie/skopiuj do swojego głównego pliku z rozwiązaniem
+```
+ln -s ../solver/pawel_smolak.pl solution.pl
+```
+
 Następnie uruchom testy poleceniem make:
 
 ```
