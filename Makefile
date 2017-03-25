@@ -1,6 +1,6 @@
 _TESTS = $(wildcard tests/*)
 TESTS = $(notdir $(_TESTS))
-PG = swipl -q
+PG = swipl -q -O #-G100g -T20g -L2g
 
 test: $(TESTS)
 
@@ -10,7 +10,7 @@ generator: $(filter g-%, $(TESTS))
 %.test:
 	@echo
 	@echo "Test suite: $@"
-	@echo "------------------------------------------"
+	@echo "------------------------------------------------------------"
 	@$(PG) -s test.pl -t test_all tests/$@
 
 .PHONY: test
