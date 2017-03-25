@@ -16,6 +16,7 @@ make test           % uruchom wszystkie testy z ./tests
 make validity       % uruchom wszstkie testy validity v-*.test
 make performance    % uruchom wszystkie testy performance p-*.test
 make p-huge.test    % uruchom pojedynczy test p-huge.test
+make share          % uruchom wszystkie testy i wrzuć wyniki na ix.io
 ```
 
 Przykładowe rozwiązanie dla make test [http://ix.io/pcF](http://ix.io/pcF)

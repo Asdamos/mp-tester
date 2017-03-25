@@ -13,4 +13,7 @@ validity: $(filter v-%, $(TESTS))
 	@echo "------------------------------------------------------------"
 	@$(PG) -s test.pl -t test_all tests/$@
 
-.PHONY: test performance validity
+share:
+	@make test | curl -F 'f:1=<-' ix.io
+
+.PHONY: test performance validity share
