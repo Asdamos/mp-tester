@@ -41,7 +41,9 @@ przechodzi wiedziała gdzie jest błąd.
 
 ## Jak dzielić się wynikami?
 ```
-make test | curl -F 'f:1=<-' ix.io
+make share           % wrzuć log wszystkich testów
+make share-valid     % wrzuć log testów validate
+make share-perf      % wrzuć log testów performance
 ```
 
 Wyniki innych osób  
