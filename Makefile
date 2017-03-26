@@ -14,6 +14,12 @@ validity: $(filter v-%, $(TESTS))
 	@$(PG) -s test.pl -t test_all tests/$@
 
 share:
+	@make -s test | curl -F 'f:1=<-' ix.io
+
+share-perf:
+	@make -s performance | curl -F 'f:1=<-' ix.io
+
+share-valid:
 	@make -s validity | curl -F 'f:1=<-' ix.io
 
-.PHONY: test performance validity share
+.PHONY: test performance validity share share-perf share-valid
