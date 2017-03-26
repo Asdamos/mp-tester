@@ -1,0 +1,31 @@
+:- module(michal_bronikowski_tests, [tests/5]).
+
+% definiujemy operatory ~/1 oraz v/2
+:- op(200, fx, ~).
+:- op(500, xfy, v).
+
+% Zbiór faktów definiujących testy
+% Należy zdefiniować swoje testy
+
+tests(excluded_middle_true, validity, [p v ~p], 500, solution([(p,t)])).
+tests(excluded_middle_false, validity, [p v ~p], 500, solution([(p,f)])).
+tests(excluded_middle_count, validity, [p v ~p], 500, count(2)).
+tests(trivialt,validity,[p],500,solution([(p,t)])).
+tests(trivialt_count,validity,[p],500,count(1)).
+tests(trivialf,validity,[~p],500,solution([(p,f)])).
+tests(trivialf_count,validity,[~p],500,count(1)).
+tests(contradictory,validity,[p,~p],500,count(0)).
+tests(false_test,validity,[p,t v b v g v j, t v g v s,p v ~p,~p],500,count(0)).
+tests(var_duplicate,validity,[p v ~p, j , ~p v w],2000,solution([(p,f),(j,t),(w,t)])).
+tests(trap,validity,[p v s, ~s, s v ~p],4000,count(0)).
+tests(artful,validity,[p v q v r, ~r v ~q v ~p, ~q v r, ~r],3000,solution( [(p, t), (r, f), (q, f)])).
+tests(nasty,validity,[~t v a,~t v ~r v s,~a v r, t , ~s],2000,count(0)).
+tests(am_i_naive_implementation,validity,[p v b v c v x, ~b v ~c,~p],2000,solution([ (p, f), (b, f), (c, t), (x, f)])).
+tests(abberant,validity,[p v s, ~s v r, ~p v r , ~r v z, ~z],2500,count(0)).
+tests(lets_count_something,validity,[p v d v f v e , ~t v f v e v g],3000,count(57)).
+tests(three_var,validity,[p , t ,z],500, count(1)).
+tests(three_var_seven_solutions,validity,[p v t v z],800,count(7)).
+tests(four_var_zero_solutions,validity,[p v t v z v q , a v b v c v q,~p,~t,~z,~q,~a,~b,~c,~q],1000, count(0)).
+tests(only_one_clause_and_empty, validity, [[]], 800, count(0)).
+tests(one_clause_is_empty,validity,[p v t , ~z, [], r],800,count(0)).
+tests(seven_variables_3_solutions,validity,[p v s , t , f , e , q , f v ~s],800,count(3)).
